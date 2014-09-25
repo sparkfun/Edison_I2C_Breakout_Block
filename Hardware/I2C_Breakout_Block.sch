@@ -16092,7 +16092,7 @@ Various fiducial points for machine vision alignment.</description>
 <hole x="2.93" y="1.98" drill="2"/>
 </package>
 <package name="DF40C-70DP-0.4(51)">
-<circle x="7.3" y="1" radius="0.1" width="0.3048" layer="21"/>
+<circle x="7.7" y="1" radius="0.1" width="0.3048" layer="21"/>
 <wire x1="-8.4" y1="1.44" x2="8.4" y2="1.44" width="0.2032" layer="21"/>
 <wire x1="8.4" y1="1.44" x2="8.4" y2="-1.44" width="0.2032" layer="21"/>
 <wire x1="8.4" y1="-1.44" x2="-8.4" y2="-1.44" width="0.2032" layer="21"/>
@@ -16167,6 +16167,10 @@ Various fiducial points for machine vision alignment.</description>
 <smd name="68" x="-6.4" y="-1.32" dx="0.2" dy="1.14" layer="16"/>
 <smd name="69" x="-6.8" y="1.32" dx="0.2" dy="1.14" layer="16"/>
 <smd name="70" x="-6.8" y="-1.32" dx="0.2" dy="1.14" layer="16"/>
+<smd name="NC4" x="-7.2" y="1.32" dx="0.2" dy="1.14" layer="16"/>
+<smd name="NC3" x="-7.2" y="-1.32" dx="0.2" dy="1.14" layer="16"/>
+<smd name="NC1" x="7.2" y="1.32" dx="0.2" dy="1.14" layer="16"/>
+<smd name="NC2" x="7.2" y="-1.32" dx="0.2" dy="1.14" layer="16"/>
 </package>
 <package name="DF40-XC-(X.X)-70DS-0.4V(51)">
 <smd name="69" x="-6.8" y="1.32" dx="0.2" dy="1.14" layer="1"/>
@@ -17869,6 +17873,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="R4" library="SparkFun-Resistors" deviceset="2.2KOHM1/10W1%(0603)" device="" value="DNP"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="2.2KOHM1/10W1%(0603)" device="" value="DNP"/>
+<part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="1.8V" device=""/>
+<part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="1.8V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17895,11 +17903,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="FID3" gate="G$1" x="241.3" y="30.48"/>
 <instance part="FID4" gate="G$1" x="246.38" y="30.48"/>
 <instance part="GND1" gate="1" x="96.52" y="63.5"/>
-<instance part="C1" gate="G$1" x="190.5" y="76.2"/>
+<instance part="C1" gate="G$1" x="215.9" y="76.2"/>
 <instance part="C2" gate="G$1" x="66.04" y="76.2"/>
 <instance part="GND2" gate="1" x="66.04" y="68.58"/>
-<instance part="GND6" gate="1" x="190.5" y="68.58"/>
-<instance part="SUPPLY1" gate="G$1" x="190.5" y="86.36"/>
+<instance part="GND6" gate="1" x="215.9" y="68.58"/>
+<instance part="SUPPLY1" gate="G$1" x="215.9" y="86.36"/>
 <instance part="JP2" gate="G$1" x="86.36" y="76.2" rot="MR180"/>
 <instance part="SJ1" gate="G$1" x="101.6" y="101.6" rot="R180"/>
 <instance part="U1" gate="G$1" x="129.54" y="132.08"/>
@@ -17908,6 +17916,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND7" gate="1" x="106.68" y="121.92"/>
 <instance part="GND8" gate="1" x="142.24" y="121.92"/>
 <instance part="GND9" gate="1" x="114.3" y="121.92"/>
+<instance part="R4" gate="G$1" x="170.18" y="86.36" rot="R90"/>
+<instance part="R5" gate="G$1" x="177.8" y="86.36" rot="R90"/>
+<instance part="SUPPLY2" gate="G$1" x="170.18" y="91.44"/>
+<instance part="SUPPLY3" gate="G$1" x="177.8" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -17933,7 +17945,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="190.5" y1="71.12" x2="190.5" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="71.12" x2="215.9" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
@@ -17962,7 +17974,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <pinref part="SUPPLY1" gate="G$1" pin="1.8V"/>
-<wire x1="190.5" y1="86.36" x2="190.5" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="86.36" x2="215.9" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="SUPPLY2" gate="G$1" pin="1.8V"/>
+</segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="SUPPLY3" gate="G$1" pin="1.8V"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -18004,15 +18024,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="GP19_I2C_1_SCL" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SCL1"/>
-<wire x1="160.02" y1="78.74" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
-<label x="165.1" y="78.74" size="1.27" layer="95" xref="yes"/>
+<wire x1="160.02" y1="78.74" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
+<label x="185.42" y="78.74" size="1.27" layer="95" xref="yes"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="170.18" y1="78.74" x2="185.42" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="81.28" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
+<junction x="170.18" y="78.74"/>
 </segment>
 </net>
 <net name="GP20_I2C_1_SDA" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="SDA1"/>
-<wire x1="160.02" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
-<label x="165.1" y="76.2" size="1.27" layer="95" xref="yes"/>
+<wire x1="160.02" y1="76.2" x2="177.8" y2="76.2" width="0.1524" layer="91"/>
+<label x="185.42" y="76.2" size="1.27" layer="95" xref="yes"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="177.8" y1="76.2" x2="185.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="81.28" x2="177.8" y2="76.2" width="0.1524" layer="91"/>
+<junction x="177.8" y="76.2"/>
 </segment>
 </net>
 <net name="VSYS" class="0">
