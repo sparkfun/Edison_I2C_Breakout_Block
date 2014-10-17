@@ -18096,7 +18096,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="1.8V" device=""/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M04" device="SMD_RA_FEMALE"/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-3-2OF3_NC_BY_TRACE" device="" value="Power Select"/>
-<part name="U1" library="SparkFun-PowerIC" deviceset="MIC5205" device="3.3V"/>
+<part name="U1" library="SparkFun-PowerIC" deviceset="MIC5205" device="3.3V" value="MIC5205"/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="10UF-6.3V-20%(1206)" device="" value="10uF"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="10UF-6.3V-20%(1206)" device="" value="10uF"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -18147,8 +18147,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND9" gate="1" x="114.3" y="121.92"/>
 <instance part="R4" gate="G$1" x="170.18" y="86.36" rot="R90"/>
 <instance part="R5" gate="G$1" x="177.8" y="86.36" rot="R90"/>
-<instance part="SUPPLY2" gate="G$1" x="170.18" y="91.44"/>
-<instance part="SUPPLY3" gate="G$1" x="177.8" y="91.44"/>
+<instance part="SUPPLY2" gate="G$1" x="170.18" y="93.98"/>
+<instance part="SUPPLY3" gate="G$1" x="177.8" y="93.98"/>
 </instances>
 <busses>
 </busses>
@@ -18208,10 +18208,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="SUPPLY2" gate="G$1" pin="1.8V"/>
+<wire x1="170.18" y1="93.98" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="SUPPLY3" gate="G$1" pin="1.8V"/>
+<wire x1="177.8" y1="93.98" x2="177.8" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
